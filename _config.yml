@@ -1,21 +1,20 @@
-# Hexo Configuration
+﻿# Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Yang的博客
-subtitle: 编程和游戏小屋
-description: 记录 Java 后端、算法与 AI Agent 的学习与实践，也分享我在编程和游戏中的思考。
+title: Yang 的技术博客
+subtitle: 记录学习、实践与长期输出
+description: 这里记录我对 Java 后端、AI Agent、算法和开发工具的学习理解，也整理项目里的问题排查、方案设计与阶段性复盘。
 keywords:
 author: Yang
 language: zh-CN
 timezone: ''
-
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://blogyang0321.top
 open_graph:
-  image: /img/avatar.png
+  image: /img/avatar.jpg
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -104,3 +103,4 @@ theme: fluid
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+

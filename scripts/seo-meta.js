@@ -39,7 +39,7 @@ hexo.extend.filter.register('after_render:html', function (html) {
     `$1${trimmed}$3`
   );
 
-  const defaultImage = `${hexo.config.url.replace(/\/$/, '')}/img/avatar.png`;
+  const defaultImage = `${hexo.config.url.replace(/\/$/, '')}/img/avatar.jpg`;
   if (!/property=["']og:image["']/i.test(output)) {
     output = output.replace(
       /<\/head>/i,

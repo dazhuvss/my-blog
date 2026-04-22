@@ -1,22 +1,23 @@
-# Fluid Theme Override Config
+﻿# Fluid Theme Override Config
 # Keep only project-specific overrides here.
 
-favicon: /img/avatar.png
-apple_touch_icon: /img/avatar.png
+favicon: /img/avatar.jpg
+apple_touch_icon: /img/avatar.jpg
 
 navbar:
-  blog_title: "Yang的博客"
+  blog_title: "Yang / Notes"
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill", name: "首页" }
-    - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill", name: "时间轴" }
+    - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill", name: "归档" }
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill", name: "分类" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill", name: "标签" }
-    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill", name: "关于" }
+    - { key: "links", link: "/links/", icon: "iconfont icon-link-fill", name: "链接" }
+    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill", name: "关于我" }
 
 index:
   slogan:
     enable: true
-    text: "编程和游戏小屋"
+    text: "记录学习、项目实践与技术思考"
   post_meta:
     date: true
     category: true
@@ -27,14 +28,13 @@ index:
 
 footer:
   content: '
-    <span>©2026 By Yang</span><br>
-    <a href="https://hexo.io" target="_blank" rel="nofollow noopener">HEXO</a>
-    <span> | </span>
-    <a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="nofollow noopener">Butterfly</a>
-    <span> | </span>
-    <a href="https://github.com/" target="_blank" rel="nofollow noopener">GitHub</a>
-    <span> | </span>
-    <a href="/img/avatar.png" target="_blank" rel="noopener">img</a>
+    <span>© 2026 Yang · Personal Tech Notes</span>
+    <span style="margin:0 12px;color:#CBD5E1;">|</span>
+    <a href="https://github.com/dazhuvss" target="_blank" rel="nofollow noopener">GitHub</a>
+    <span style="margin:0 12px;color:#CBD5E1;">|</span>
+    <a href="/atom.xml" target="_blank" rel="noopener">RSS</a>
+    <span style="margin:0 12px;color:#CBD5E1;">|</span>
+    <a href="/about/" target="_self" rel="noopener">关于我</a>
   '
   statistics:
     enable: false
@@ -74,3 +74,4 @@ tab_title_separator: " - "
 open_graph:
   enable: true
   twitter_card: summary_large_image
+
