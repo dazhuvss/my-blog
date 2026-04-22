@@ -5,9 +5,10 @@
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
-    "deploy": "hexo deploy",
+    "deploy": "pnpm run build && wrangler deploy",
     "server": "hexo server",
-    "netlify": "npm run clean && npm run build"
+    "netlify": "npm run clean && npm run build",
+    "preview": "pnpm run build && wrangler dev"
   },
   "hexo": {
     "version": "8.1.1"
@@ -25,5 +26,8 @@
     "hexo-theme-fluid": "^1.9.9",
     "hexo-theme-landscape": "^1.0.0",
     "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "wrangler": "^4.84.1"
   }
 }
