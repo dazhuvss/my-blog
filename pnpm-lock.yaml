@@ -17,9 +17,18 @@ importers:
       hexo-generator-category:
         specifier: ^2.0.0
         version: 2.0.0
+      hexo-generator-feed:
+        specifier: ^4.0.0
+        version: 4.0.0
       hexo-generator-index:
         specifier: ^4.0.0
         version: 4.0.0
+      hexo-generator-searchdb:
+        specifier: ^1.5.0
+        version: 1.5.0(chokidar@3.6.0)
+      hexo-generator-sitemap:
+        specifier: ^3.0.1
+        version: 3.0.1(chokidar@3.6.0)
       hexo-generator-tag:
         specifier: ^2.0.0
         version: 2.0.0
@@ -38,9 +47,6 @@ importers:
       hexo-theme-fluid:
         specifier: ^1.9.9
         version: 1.9.9(nunjucks@3.2.4(chokidar@3.6.0))
-      hexo-theme-landscape:
-        specifier: ^1.0.0
-        version: 1.1.0
       sharp:
         specifier: ^0.34.5
         version: 0.34.5
@@ -237,6 +243,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@nodable/entities@2.1.0':
+    resolution: {integrity: sha512-nyT7T3nbMyBI/lvr6L5TyWbFJAI9FTgVRakNoBqCD+PmID8DzFrrNdLLtHMwMszOtqZa8PAOV24ZqDnQrhQINA==}
+
   '@types/trusted-types@2.0.7':
     resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
 
@@ -400,11 +409,18 @@ packages:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
 
+  dom-serializer@1.4.1:
+    resolution: {integrity: sha512-VHwB3KfrcOOkelEG2ZOfxqLZdfkil8PtJi4P8N2MMXucZq2yLp75ClViUlOVwyoHEDjYU433Aq+5zWP61+RGag==}
+
   dom-serializer@2.0.0:
     resolution: {integrity: sha512-wIkAryiqt/nV5EQKqQpo3SToSOV9J0DnbJqwK7Wv/Trc92zIAYZ4FlMu+JPFW1DfGFt81ZTCGgDEabffXeLyJg==}
 
   domelementtype@2.3.0:
     resolution: {integrity: sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==}
+
+  domhandler@4.3.1:
+    resolution: {integrity: sha512-GrwoxYN+uWlzO8uhUXRl0P+kHE4GtVPfYzVLcUxPL7KNdHKj66vvlhiweIHqYYXWlw+T8iLMp42Lm67ghw4WMQ==}
+    engines: {node: '>= 4'}
 
   domhandler@5.0.3:
     resolution: {integrity: sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==}
@@ -412,6 +428,9 @@ packages:
 
   dompurify@3.3.3:
     resolution: {integrity: sha512-Oj6pzI2+RqBfFG+qOaOLbFXLQ90ARpcGG6UePL82bJLtdsa6CYJD7nmiU8MW9nQNOtCHV3lZ/Bzq1X0QYbBZCA==}
+
+  domutils@2.8.0:
+    resolution: {integrity: sha512-w96Cjofp72M5IIhpjgobBimYEfoPjx1Vx0BSX9P30WBdZW2WIKU0T1Bd0kz2eNZ9ikjKgHbEyKx8BB6H1L3h3A==}
 
   domutils@3.2.2:
     resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
@@ -435,6 +454,13 @@ packages:
   encodeurl@2.0.0:
     resolution: {integrity: sha512-Q0n9HRi4m6JuGIV1eFlmvJB7ZEVxu93IrMyiMsGC0lrMJMWzRgx6WGquyfQgZVb31vhGgXnfmPNNXmxnOkRBrg==}
     engines: {node: '>= 0.8'}
+
+  entities@2.2.0:
+    resolution: {integrity: sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==}
+
+  entities@3.0.1:
+    resolution: {integrity: sha512-WiyBqoomrwMdFG1e0kqvASYfnlb0lp8M5o5Fw2OFq1hNZxxcNk8Ik0Xm7LxzBhuidnZB/UtBqVCgUz3kBOP51Q==}
+    engines: {node: '>=0.12'}
 
   entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
@@ -484,6 +510,16 @@ packages:
 
   fast-text-table@1.0.1:
     resolution: {integrity: sha512-KUwE3MizTzXwhrvTTEpWbug1ngV1zfjwzdxSkeWYGUoVGaaQoid+jxgg4zm4LB+OrtnD+X2xJFq7DCO3pc3fdQ==}
+
+  fast-xml-builder@1.1.9:
+    resolution: {integrity: sha512-jcyKVSEX13iseJqg7n/KWw+xnu/7fdrZ333Fac54KjHDIELVCfDDJXYIm6DTJ0Su4gSzrhqiK0DzY/wZbF40mw==}
+
+  fast-xml-parser@5.7.3:
+    resolution: {integrity: sha512-C0AaNuC+mscy6vrAQKAc/rMq+zAPHodfHGZu4sGVehvAQt/JLG1O5zEcYcXSY5zSqr4YVgxsB+pHXTq0i7eDlg==}
+    hasBin: true
+
+  feedsmith@2.9.0:
+    resolution: {integrity: sha512-TYucytOx4bTrD4ON0iuJG9y0Me7fiT0EZ+7MIE0xptvd8TL6nY0Z1jVPa9W39WMJUtPqV2r27TQxL/z5DCCmdA==}
 
   filelist@1.0.6:
     resolution: {integrity: sha512-5giy2PkLYY1cP39p17Ech+2xlpTRL9HLspOfEgm0L6CwBXBTgsK5ou0JtzYuepxkaQ/tvhCFIJ5uXo0OrM2DxA==}
@@ -575,9 +611,20 @@ packages:
     resolution: {integrity: sha512-9OduRBf3WeRDa4BR0kAfRjOVHur7v3fm0NKAwbjUiqULigAdNZVZPO3cHKW2MlBbl/lI5PuWdhQ9zZ99CCCAgQ==}
     engines: {node: '>=14'}
 
+  hexo-generator-feed@4.0.0:
+    resolution: {integrity: sha512-wG0SDBwJ60B+bcMQhArjSpw/bsuP1/4o9Ar+FnxTMRq5/SEZZlj7q/r7HI60olRf0eurqEm4Dm8yHfAMKQhkoA==}
+    engines: {node: '>=20.19.0'}
+
   hexo-generator-index@4.0.0:
     resolution: {integrity: sha512-KeM7mOCKWINGFAk1E+CkjMMgqFIv8oaRbGxR7ipkQAp44o4aopkVftma4sdIplOq9WQEWfVYDUK5gEv9J3nzUg==}
     engines: {node: '>=18'}
+
+  hexo-generator-searchdb@1.5.0:
+    resolution: {integrity: sha512-d0b5SueDxJimTFaHpPg430FQFx7DtMkmEIHo0UTOjXWRy+eDqNSp1CuS04P7fWzMnH2h+aQc6O9D2yY+3sdAUg==}
+
+  hexo-generator-sitemap@3.0.1:
+    resolution: {integrity: sha512-n+0KLNmq6TLbiZPTQF6NY5MbEem/O+DFx0lgQZNQcU4tdjXIZRrQJs+KRKeT66NTkdlYTqb4WwCxswLqQz0crA==}
+    engines: {node: '>=12.13.0'}
 
   hexo-generator-tag@2.0.0:
     resolution: {integrity: sha512-1px/hF3veEohWDN8jjzchQhaiz+uOStUvvMaBJC9vWOlALh30UFcapL8IrvAwwJZjFRVA+WqGgDRqoQ8+yaaFw==}
@@ -617,8 +664,9 @@ packages:
     peerDependencies:
       nunjucks: ^3.0.0
 
-  hexo-theme-landscape@1.1.0:
-    resolution: {integrity: sha512-nszjixBEiEDZjf7glAGbHg0nKGHZdUDwzFVVdRDeu4FeHfGcY5CZNl9sF4vSligjnD8IwFXpDfx5E+GRmNKvWg==}
+  hexo-util@2.7.0:
+    resolution: {integrity: sha512-hQM3h34nhDg0bSe/Tg1lnpODvNkz7h2u0+lZGzlKL0Oufp+5KCAEUX9wal7/xC7ax3/cwEn8IuoU75kNpZLpJQ==}
+    engines: {node: '>=12.4.0'}
 
   hexo-util@3.3.0:
     resolution: {integrity: sha512-YvGngXijE2muEh5L/VI4Fmjqb+/yAkmY+VuyhWVoRwQu1X7bmWodsfYRXX7CUYhi5LqsvH8FAe/yBW1+f6ZX4Q==}
@@ -643,6 +691,9 @@ packages:
 
   htmlparser2@10.1.0:
     resolution: {integrity: sha512-VTZkM9GWRAtEpveh7MSF6SjjrpNVNNVJfFup7xTY3UpFtm67foy9HDVXneLtFVt4pMz5kZtgNcvCniNFb1hlEQ==}
+
+  htmlparser2@7.2.0:
+    resolution: {integrity: sha512-H7MImA4MS6cw7nbyURtLPO1Tms7C5H602LRETv95z1MxO/7CP7rDVROehUYeYBUYEON94NXXDEPmZuq+hX4sog==}
 
   htmlparser2@9.1.0:
     resolution: {integrity: sha512-5zfg6mHUoaer/97TxnGpxmbR7zJtPwIYFMZ/H5ucTlPZhKvtum05yiPK3Mgai3a0DyVxv7qYqoweaEd2nrYQzQ==}
@@ -877,6 +928,10 @@ packages:
   pascal-case@3.1.2:
     resolution: {integrity: sha512-uWlGT3YSnK9x3BQJaOdcZwrnV6hPpd8jFH1/ucpiLRPh/2zCVJKS19E4GvYHvaCcACn3foXZ0cLB9Wrx1KGe5g==}
 
+  path-expression-matcher@1.5.0:
+    resolution: {integrity: sha512-cbrerZV+6rvdQrrD+iGMcZFEiiSrbv9Tfdkvnusy6y0x0GKBXREFg/Y65GhIfm0tnLntThhzCnfKwp1WRjeCyQ==}
+    engines: {node: '>=14.0.0'}
+
   path-is-absolute@1.0.1:
     resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
     engines: {node: '>=0.10.0'}
@@ -1006,6 +1061,9 @@ packages:
   strip-indent@3.0.0:
     resolution: {integrity: sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==}
     engines: {node: '>=8'}
+
+  strnum@2.3.0:
+    resolution: {integrity: sha512-ums3KNd42PGyx5xaoVTO1mjU1bH3NpY4vsrVlnv9PNGqQj8wd7rJ6nEypLrJ7z5vxK5RP0yMLo6J/Gsm62DI5Q==}
 
   stylus@0.62.0:
     resolution: {integrity: sha512-v3YCf31atbwJQIMtPNX8hcQ+okD4NQaTuKGUWfII8eaqn+3otrbttGL1zSMZAAtiPsBztQnujVBugg/cXFUpyg==}
@@ -1255,6 +1313,8 @@ snapshots:
   '@img/sharp-win32-x64@0.34.5':
     optional: true
 
+  '@nodable/entities@2.1.0': {}
+
   '@types/trusted-types@2.0.7':
     optional: true
 
@@ -1405,6 +1465,12 @@ snapshots:
 
   detect-libc@2.1.2: {}
 
+  dom-serializer@1.4.1:
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 4.3.1
+      entities: 2.2.0
+
   dom-serializer@2.0.0:
     dependencies:
       domelementtype: 2.3.0
@@ -1413,6 +1479,10 @@ snapshots:
 
   domelementtype@2.3.0: {}
 
+  domhandler@4.3.1:
+    dependencies:
+      domelementtype: 2.3.0
+
   domhandler@5.0.3:
     dependencies:
       domelementtype: 2.3.0
@@ -1420,6 +1490,12 @@ snapshots:
   dompurify@3.3.3:
     optionalDependencies:
       '@types/trusted-types': 2.0.7
+
+  domutils@2.8.0:
+    dependencies:
+      dom-serializer: 1.4.1
+      domelementtype: 2.3.0
+      domhandler: 4.3.1
 
   domutils@3.2.2:
     dependencies:
@@ -1442,6 +1518,10 @@ snapshots:
   encodeurl@1.0.2: {}
 
   encodeurl@2.0.0: {}
+
+  entities@2.2.0: {}
+
+  entities@3.0.1: {}
 
   entities@4.5.0: {}
 
@@ -1475,6 +1555,22 @@ snapshots:
   fast-equals@3.0.3: {}
 
   fast-text-table@1.0.1: {}
+
+  fast-xml-builder@1.1.9:
+    dependencies:
+      path-expression-matcher: 1.5.0
+
+  fast-xml-parser@5.7.3:
+    dependencies:
+      '@nodable/entities': 2.1.0
+      fast-xml-builder: 1.1.9
+      path-expression-matcher: 1.5.0
+      strnum: 2.3.0
+
+  feedsmith@2.9.0:
+    dependencies:
+      entities: 7.0.1
+      fast-xml-parser: 5.7.3
 
   filelist@1.0.6:
     dependencies:
@@ -1597,9 +1693,28 @@ snapshots:
     dependencies:
       hexo-pagination: 3.0.0
 
+  hexo-generator-feed@4.0.0:
+    dependencies:
+      feedsmith: 2.9.0
+      hexo-util: 4.0.0
+
   hexo-generator-index@4.0.0:
     dependencies:
       hexo-pagination: 3.0.0
+
+  hexo-generator-searchdb@1.5.0(chokidar@3.6.0):
+    dependencies:
+      nunjucks: 3.2.4(chokidar@3.6.0)
+    transitivePeerDependencies:
+      - chokidar
+
+  hexo-generator-sitemap@3.0.1(chokidar@3.6.0):
+    dependencies:
+      hexo-util: 2.7.0
+      micromatch: 4.0.8
+      nunjucks: 3.2.4(chokidar@3.6.0)
+    transitivePeerDependencies:
+      - chokidar
 
   hexo-generator-tag@2.0.0:
     dependencies:
@@ -1655,7 +1770,16 @@ snapshots:
     dependencies:
       nunjucks: 3.2.4(chokidar@3.6.0)
 
-  hexo-theme-landscape@1.1.0: {}
+  hexo-util@2.7.0:
+    dependencies:
+      bluebird: 3.7.2
+      camel-case: 4.1.2
+      cross-spawn: 7.0.6
+      deepmerge: 4.3.1
+      highlight.js: 11.11.1
+      htmlparser2: 7.2.0
+      prismjs: 1.30.0
+      strip-indent: 3.0.0
 
   hexo-util@3.3.0:
     dependencies:
@@ -1717,6 +1841,13 @@ snapshots:
       domhandler: 5.0.3
       domutils: 3.2.2
       entities: 7.0.1
+
+  htmlparser2@7.2.0:
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 4.3.1
+      domutils: 2.8.0
+      entities: 3.0.1
 
   htmlparser2@9.1.0:
     dependencies:
@@ -1953,6 +2084,8 @@ snapshots:
       no-case: 3.0.4
       tslib: 2.8.1
 
+  path-expression-matcher@1.5.0: {}
+
   path-is-absolute@1.0.1: {}
 
   path-key@3.1.1: {}
@@ -2095,6 +2228,8 @@ snapshots:
   strip-indent@3.0.0:
     dependencies:
       min-indent: 1.0.1
+
+  strnum@2.3.0: {}
 
   stylus@0.62.0:
     dependencies:

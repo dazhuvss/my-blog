@@ -1,11 +1,43 @@
-﻿# Fluid Theme Override Config
-# Keep only project-specific overrides here.
+# Fluid Theme Override Config
 
 favicon: /img/avatar.jpg
 apple_touch_icon: /img/avatar.jpg
 
+# ---------- Dark Mode ----------
+dark_mode:
+  enable: true
+  default: auto
+
+# ---------- Color ----------
+color:
+  body_bg_color: "#f5f7fa"
+  body_bg_color_dark: "#181c27"
+  navbar_bg_color: "#1e3a5f"
+  navbar_bg_color_dark: "#1a2332"
+  navbar_text_color: "#fff"
+  navbar_text_color_dark: "#c8d6e5"
+  text_color: "#3c4858"
+  text_color_dark: "#c4c6c9"
+  sec_text_color: "#718096"
+  sec_text_color_dark: "#a7a9ad"
+  post_text_color: "#2c3e50"
+  post_text_color_dark: "#c4c6c9"
+  post_heading_color: "#1a202c"
+  post_heading_color_dark: "#c4c6c9"
+  post_link_color: "#2563eb"
+  post_link_color_dark: "#60a5fa"
+  link_hover_color: "#1d4ed8"
+  link_hover_color_dark: "#93bbfd"
+  board_color: "#ffffff"
+  board_color_dark: "#252d38"
+
+# ---------- Navbar ----------
 navbar:
   blog_title: "Yang / Notes"
+  ground_glass:
+    enable: true
+    px: 4
+    alpha: 0.75
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill", name: "首页" }
     - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill", name: "归档" }
@@ -14,10 +46,72 @@ navbar:
     - { key: "links", link: "/links/", icon: "iconfont icon-link-fill", name: "链接" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill", name: "关于我" }
 
+# ---------- Banner ----------
+banner:
+  parallax: true
+  width_height_ratio: 1.5
+  index:
+    banner_img: /img/home-bg-generated.svg
+    banner_img_height: 70
+    banner_mask_alpha: 0.3
+  post:
+    banner_img: /img/home-bg-generated.svg
+    banner_img_height: 55
+    banner_mask_alpha: 0.45
+  archive:
+    banner_img: /img/home-bg-generated.svg
+    banner_img_height: 50
+    banner_mask_alpha: 0.4
+  category:
+    banner_img: /img/home-bg-generated.svg
+    banner_img_height: 50
+    banner_mask_alpha: 0.4
+  tag:
+    banner_img: /img/home-bg-generated.svg
+    banner_img_height: 55
+    banner_mask_alpha: 0.4
+  about:
+    banner_img: /img/home-bg-generated.svg
+    banner_img_height: 50
+    banner_mask_alpha: 0.4
+  links:
+    banner_img: /img/home-bg-generated.svg
+    banner_img_height: 50
+    banner_mask_alpha: 0.4
+
+# ---------- Scroll ----------
+scroll_down_arrow:
+  enable: true
+  banner_height_limit: 80
+
+scroll_top_arrow:
+  enable: true
+
+# ---------- Fun Features ----------
+fun_features:
+  typing:
+    enable: true
+    typeSpeed: 80
+    cursorChar: "_"
+    loop: false
+    scope: ["home"]
+  anchorjs:
+    enable: true
+    element: h1,h2,h3,h4,h5,h6
+    placement: left
+    visible: hover
+  progressbar:
+    enable: true
+    height_px: 3
+    color: "#3b82f6"
+
+# ---------- Index ----------
 index:
   slogan:
     enable: true
-    text: "记录学习、项目实践与技术思考"
+    text:
+      - "记录学习、项目实践与技术思考"
+      - "长期积累，持续输出"
   post_meta:
     date: true
     category: true
@@ -25,7 +119,75 @@ index:
   auto_excerpt:
     enable: true
   post_url_target: _self
+  default_index_img: /img/home-bg-generated.svg
 
+# ---------- Post ----------
+post:
+  updated:
+    enable: true
+    relative: false
+  toc:
+    enable: true
+    placement: right
+    expand_all: true
+  meta:
+    author:
+      enable: true
+    date:
+      enable: true
+      format: "YYYY-MM-DD HH:mm"
+    wordcount:
+      enable: true
+    min2read:
+      enable: true
+      awl: 2
+      wpm: 180
+  prev_next:
+    enable: true
+  image_zoom:
+    enable: true
+  image_caption:
+    enable: true
+  copyright:
+    enable: true
+    license: BY-NC-SA
+  category_bar:
+    enable: true
+    placement: left
+    post_limit: 8
+
+# ---------- Code ----------
+code:
+  copy_btn: true
+  language:
+    enable: true
+  highlight:
+    enable: true
+    line_number: true
+    lib: "highlightjs"
+    highlightjs:
+      style: "github"
+      style_dark: "github-dark"
+
+# ---------- Font ----------
+font:
+  font_size: 17px
+  code_font_size: 90%
+
+# ---------- Lazyload ----------
+lazyload:
+  enable: true
+  onlypost: false
+  offset_factor: 2
+
+# ---------- Search ----------
+search:
+  enable: true
+  path: /local-search.xml
+  field: post
+  content: true
+
+# ---------- Footer ----------
 footer:
   content: '
     <span>© 2026 Yang · Personal Tech Notes</span>
@@ -40,38 +202,9 @@ footer:
     enable: false
     source: "busuanzi"
 
-post:
-  updated:
-    enable: true
-    relative: false
-  toc:
-    enable: true
-    placement: right
-    expand_all: true
-  meta:
-    date:
-      enable: true
-      format: "YYYY-MM-DD HH:mm"
-
-code:
-  copy_btn: true
-  language:
-    enable: true
-  highlight:
-    enable: true
-    line_number: true
-    lib: "highlightjs"
-    highlightjs:
-      style: "github"
-      style_dark: "github-dark"
-
-font:
-  font_size: 17px
-  code_font_size: 90%
-
+# ---------- Meta ----------
 tab_title_separator: " - "
 
 open_graph:
   enable: true
   twitter_card: summary_large_image
-
